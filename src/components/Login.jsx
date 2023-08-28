@@ -1,4 +1,4 @@
-import { useState,useContext } from "react";
+import { useState,useContext,useEffect } from "react";
 import { useNavigate,Link } from "react-router-dom";
 import { UserContext } from "../context/UserProvider";
 
@@ -53,6 +53,13 @@ function Login() {
       }, 1500);
     };
   
+
+
+    useEffect(() => {
+      
+      alert('user:root@gmail.com password:root ')
+    }, [])
+    
     return (
       <section className="w-screen h-screen flex items-center justify-center bg-gray-100  ">
         {/* cuadro de login */}
