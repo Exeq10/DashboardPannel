@@ -33,7 +33,7 @@ function BarChartComp() {
     
     <Chart
     chartType="Bar"
-    width="95%"
+    width="100%"
     height="290px"
     data={data}
     options={options}
