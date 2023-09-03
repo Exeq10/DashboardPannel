@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Options = [
   { option: "Inicio", icon: "fa-solid fa-gauge",route:'/' },
   { option: "Usuario", icon: "fa-solid fa-user",route:'/users' },
-  { option: "Estadísticas", icon: "fa-solid fa-chart-simple",route:'/statics' },
+  { option: "Estadísticas", icon: "fa-solid fa-chart-simple",route:'/charts' },
   { option: "Transacciones", icon: "fa-solid fa-cart-shopping",route:'/transactions' },
 ];
 
@@ -50,7 +50,7 @@ const nickname = localStorage.getItem('email') || ''
 
   return (
     <>
-      <section className="flex flex-col h-screen   w-full bg-gray-100 ">
+      <section className=" flex    flex-col h-screen   w-full bg-gray-100 ">
         <header
           className={`bg-blue-500 flex  ${
             wfull ? "w-10/12" : "w-12/12 "
@@ -72,10 +72,10 @@ const nickname = localStorage.getItem('email') || ''
                 <i className="fa-solid fa-xmark"></i>{" "}
               </button>
             )}
-            <h1>Dashboard</h1>
+            <h1 className="md:flex   hidden">Dashboard</h1>
           </div>
-        <div className="flex gap-5">
-        <p className="text-sm">Bienvenido <span className="bg-white py-1 px-3 text-blue-600 rounded-md">{nickname}</span></p>
+        <div className="md:flex gap-5  hidden">
+        <p className="text-sm     ">Bienvenido <span className="bg-white py-1 px-3 text-blue-600 rounded-md">{nickname}</span></p>
 
           <i className="fa-solid fa-bell "></i>
 
@@ -86,8 +86,8 @@ const nickname = localStorage.getItem('email') || ''
         <div className="flex h-auto bg-white    ">
           {/* aside nav */}
           <aside
-            className={`h-full ease-in duration-300  overflow-hidden ${
-              wfull ? "w-2/12 " : "w-1/12 "
+            className={`h-full ease-in duration-300 md:relative  absolute  overflow-hidden ${
+              wfull ? "md:w-2/12 w-12/12 z-10 duration-200 " : "md:w-1/12 w-0 "
             } bg-white  h-full flex-col  `}
           >
             <ul className="w-full h-full justify-start text-gray-600  items-start flex flex-col  ">
@@ -109,7 +109,7 @@ const nickname = localStorage.getItem('email') || ''
               ))}
             </ul>
           </aside>
-          <main className=" grid grid-cols-12 w-full  row-auto h-auto   border  gap-3 p-5 bg-gray-200">
+          <main className=" md:grid md:grid-cols-12 w-full  flex flex-wrap justify-center   row-auto h-auto   border  gap-3 p-5 bg-gray-200">
    
    <Outlet />
 

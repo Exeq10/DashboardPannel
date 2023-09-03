@@ -8,7 +8,7 @@ function Dashboard() {
     <>
            <Statistics /> 
 
-            <div className="col-span-6 rounded-md p-5 h-auto bg-white">
+            <div className="md:col-span-5 col-span-12   rounded-md p-5 h-auto bg-white">
               <h2 className="text-center mb-2">Tabla de productos</h2>
 
                <BarChartComp /> 

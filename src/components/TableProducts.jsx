@@ -8,9 +8,9 @@ function TableProducts() {
   return (
     
 
- <>
+ <div className=" md:flex hidden  w-full justify-center col-span-12 mx-auto p-4  mt-5 ">
  
- <table className="table-auto col-span-12 mt-5 justify-center align-middle border p-4 bg-white border-gray-200 shadow-md overflow-y-scroll h-9">
+ <table className="md:table-auto   md:col-span-12  justify-center align-middle border  bg-white border-gray-200 shadow-md overflow-y-scroll h-9">
   <caption className="caption-top mb-2 text-center bg-white text-blue-500 p-2">
   
   Productos más vendidos 
@@ -53,7 +53,7 @@ function TableProducts() {
   
   </tbody>
 </table>
-</>
+</div>
   )
 }
 

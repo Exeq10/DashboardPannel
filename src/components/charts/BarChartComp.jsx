@@ -1,53 +1,44 @@
-import { useState, useEffect, useContext } from "react";
-import {
-  BarChart,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-  Bar,
-  Legend,
-  LabelList,
-  Label,
-} from "recharts";
-import { ProductsContext } from "../../context/ProductsProvider";
+import { Chart } from "react-google-charts";
+
+
+
+
 
 function BarChartComp() {
-  
 
-  const {dataArray} = useContext(ProductsContext)
+  const data = [
+    ["Mes", "Ventas", "Clientes", "Ganacias"],
+ [  "Enero", 1500 , 145 , 500  ],
+[  "Febrero",1500 , 1123 , 800  ],
+  ["Marzo",1500 , 111 , 586 ],
+ [ "Abril",1500 , 122 , 596  ],
+ [ "Mayo",1500 , 129 , 456 ],
+ [ "Junio",1500 , 178 , 123  ],
+ [ "Julio",1500 , 145 , 693  ],
+  ["Agosto",1500 , 143 , 485 ],
+ [ "Setiembre",1500 , 169 , 963  ],
+  ["Octubre",1500 , 135 , 456  ],
+ [ "Noviembre",1500 , 169 , 890  ],
+ [ "Diciembre",1500 , 189 , 523 ]
+  ];
+  
+   const options = {
+    chart: {
+      title: "Datos Anuales",
+      subtitle: "Ventas, Clientes, Crecimiento ",
+    },
+  };
 
   return (
-    <section className="col-span-5">
-      <ResponsiveContainer width={600} height={300} className={"bg-white"}>
-        <BarChart
-          data={dataArray}
-          margin={{ top: 2, bottom: 2, left: 4, right: "10" }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name">
-            <Label value="Productos" offset={0} position="insideBottom" />
-          </XAxis>
-          <YAxis
-            label={{
-              value: "Precios",
-              angle: -90,
-              position: "insideLeft",
-              textAnchor: "middle",
-            }}
-          />
-          <Bar dataKey="price" fill="#9CA3AF">
-            
-          </Bar>
-          <Bar dataKey="rating.count" fill="#3B82F6">
-            <LabelList dataKey="rating.count" position="top" />
-          </Bar>
-          <Tooltip />
-        </BarChart>
-      </ResponsiveContainer>
-    </section>
-  );
+    
+    <Chart
+    chartType="Bar"
+    width="95%"
+    height="290px"
+    data={data}
+    options={options}
+  />
+  )
 }
 
-export default BarChartComp;
+export default BarChartComp

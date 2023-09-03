@@ -6,7 +6,7 @@ function TableUsers() {
   const { dataUser, deleteUser } = useContext(UserContext);
 
   return (
-    <table className="table-auto col-span-12 mt-5 justify-center align-middle border p-4 bg-white border-gray-200 shadow-md overflow-y-scroll h-9">
+    <table className="table-auto md:col-span-12 col-span-6 mt-5 justify-center align-middle border p-4 bg-white border-gray-200 shadow-md overflow-y-scroll h-9">
       <caption className="caption-top mb-2 text-center bg-white text-blue-500 p-2">
         Usuarios registrados
       </caption>
@@ -32,7 +32,7 @@ function TableUsers() {
               <td className="p-3 text-center shadow-inner capitalize">
                 {user.phone}
               </td>
-              <td className="p-3 text-center shadow-inner capitalize">
+              <td className=" p-3 text-center shadow-inner capitalize">
                 {user.address.street} N° {user.address.number}
               </td>
               <td className="p-3 flex text-center justify-center shadow-inner gap-2 capitalize">

@@ -13,6 +13,7 @@ import {
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import ErrorElement from "./components/ErrorElement";
 import { useState } from "react";
+import ChartsStatus from "./components/pages/ChartsStatus";
 
 
 
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
           children={[
             <Route index={true} element={<Dashboard />}  />,
             <Route path="/users" element={<Users />}  />,
+            <Route path="/charts" element={<ChartsStatus />}  />,
           ]}
         />
       </Route>
