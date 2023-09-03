@@ -45,9 +45,9 @@ function Login() {
     }, 1500);
   };
 
- /*  useEffect(() => {
+  useEffect(() => {
     alert("user:root@gmail.com password:root ");
-  }, []); */
+  }, []);
 
   return (
     <section className="w-screen h-screen flex items-center justify-center bg-gray-100 bg-custom  ">
