@@ -116,7 +116,7 @@ const nickname = localStorage.getItem('email') || ''
                     } */}
             </ul>
           </aside>
-          <main className=" md:grid md:grid-cols-12 w-full  flex flex-wrap justify-center   row-auto h-auto   border  gap-3 p-5 bg-gray-200">
+          <main className=" md:grid md:grid-cols-12 w-full  flex flex-wrap justify-center   row-auto h-full  border  gap-3 p-5 bg-gray-200">
    
    <Outlet />
 

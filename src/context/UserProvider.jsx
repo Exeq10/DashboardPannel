@@ -18,7 +18,7 @@ const [dataUser, setUser] = useState([]);
 
 /* trae todos los usuarios en lista  */
   const getData = async () => {
-    const res = await fetch("https://fakestoreapi.com/users?limit=50");
+    const res = await fetch("https://fakestoreapi.com/users?limit=20");
 
     const data = await res.json();
 
@@ -61,7 +61,7 @@ const [dataUser, setUser] = useState([]);
 
   return (
     
-    <UserContext.Provider value={{dataUser,deleteUser, setAuth,auth}}>
+    <UserContext.Provider value={{dataUser,setUser, deleteUser, setAuth,auth}}>
 
 {children}
 
