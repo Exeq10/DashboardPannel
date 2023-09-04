@@ -18,7 +18,7 @@ const [dataUser, setUser] = useState([]);
 
 /* trae todos los usuarios en lista  */
   const getData = async () => {
-    const res = await fetch("https://fakestoreapi.com/users?limit=5");
+    const res = await fetch("https://fakestoreapi.com/users?limit=50");
 
     const data = await res.json();
 

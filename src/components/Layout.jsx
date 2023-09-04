@@ -74,12 +74,12 @@ const nickname = localStorage.getItem('email') || ''
             )}
             <h1 className="md:flex   hidden">Dashboard</h1>
           </div>
-        <div className="md:flex gap-5  hidden">
-        <p className="text-sm     ">Bienvenido <span className="bg-white py-1 px-3 text-blue-600 rounded-md">{nickname}</span></p>
+        <div className="flex gap-5  ">
+        <p className="text-sm    md:visible  hidden  ">Bienvenido <span className="bg-white py-1 px-3 text-blue-600 rounded-md">{nickname}</span></p>
 
           <i className="fa-solid fa-bell "></i>
 
-          <button className="px-3 text-sm  text-white " onClick={()=> closeSesion()}>Cerrar sesión</button>
+          <button className="px-3 text-sm   text-white " onClick={()=> closeSesion()}><i className="fa-solid fa-arrow-right-from-bracket"></i> Cerrar sesión</button>
         </div>
         </header>
 
@@ -107,6 +107,13 @@ const nickname = localStorage.getItem('email') || ''
                 </li>
                   </Link>
               ))}
+
+
+                  {/*   {
+                      wfull ?<button className="px-3   text-gray-600 justify-center  items-center w-full  mt-2 py-1 sm:flex hidden gap-2  " onClick={()=> closeSesion()}><i className="fa-solid fa-arrow-right-from-bracket text-xl"> </i>Cerrar sesión</button>  : <button className="px-3 text-gray-600 justify-center  items-start w-full text-xl mt-2 py-1 sm:flex hidden  gap-2  " onClick={()=> closeSesion()}><i className="fa-solid fa-arrow-right-from-bracket"></i></button>
+
+                      
+                    } */}
             </ul>
           </aside>
           <main className=" md:grid md:grid-cols-12 w-full  flex flex-wrap justify-center   row-auto h-auto   border  gap-3 p-5 bg-gray-200">
