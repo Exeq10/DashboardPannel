@@ -6,7 +6,7 @@ function UserCard({user}) {
 
             <div className="flex items-center gap-2 flex-1 ">
                 <i className="fa-solid fa-user"></i>
-                <p className="capitalize"> {user.name.firstname}  </p>
+                <p className="capitalize"> {user.name.firstname} {user.name.lastname}  </p>
             </div>
             <div className="flex items-center gap-2 flex-1 ">
                 <i className="fa-solid fa-envelope"></i>
